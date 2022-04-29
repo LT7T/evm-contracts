@@ -9,7 +9,7 @@ import "../extensions/ERC721CollectionMetadataExtension.sol";
 import "../extensions/ERC721PrefixedMetadataExtension.sol";
 import "../extensions/ERC721AutoIdMinterExtension.sol";
 import "../extensions/ERC721OwnerMintExtension.sol";
-import "../extensions/ERC721PreSaleExtension.sol";
+//import "../extensions/ERC721PreSaleExtension.sol";
 import "../extensions/ERC721PublicSaleExtension.sol";
 import "../extensions/ERC721SimpleProceedsExtension.sol";
 import "../extensions/ERC721RoleBasedMintExtension.sol";
@@ -36,8 +36,8 @@ contract ERC721FullFeaturedCollection is
         string memory contractURI,
         string memory placeholderURI,
         uint256 maxSupply,
-        \\uint256 preSalePrice,
-        \\uint256 preSaleMaxMintPerWallet,
+        //uint256 preSalePrice,
+        //uint256 preSaleMaxMintPerWallet,
         uint256 publicSalePrice,
         uint256 publicSaleMaxMintPerTx
     )
@@ -45,7 +45,7 @@ contract ERC721FullFeaturedCollection is
         ERC721CollectionMetadataExtension(contractURI)
         ERC721PrefixedMetadataExtension(placeholderURI)
         ERC721AutoIdMinterExtension(maxSupply)
-        ERC721PreSaleExtension(preSalePrice, preSaleMaxMintPerWallet)
+        //ERC721PreSaleExtension(preSalePrice, preSaleMaxMintPerWallet)
         ERC721PublicSaleExtension(publicSalePrice, publicSaleMaxMintPerTx)
     {
         _setupRole(DEFAULT_ADMIN_ROLE, _msgSender());
@@ -93,10 +93,10 @@ contract ERC721FullFeaturedCollection is
             uint256 _maxSupply,
             uint256 _totalSupply,
             uint256 _senderBalance,
-            uint256 _preSalePrice,
-            uint256 _preSaleMaxMintPerWallet,
-            uint256 _preSaleAlreadyClaimed,
-            bool _preSaleActive,
+            //uint256 _preSalePrice,
+            //uint256 _preSaleMaxMintPerWallet,
+            //uint256 _preSaleAlreadyClaimed,
+            //bool _preSaleActive,
             uint256 _publicSalePrice,
             uint256 _publicSaleMaxMintPerTx,
             bool _publicSaleActive
@@ -112,10 +112,10 @@ contract ERC721FullFeaturedCollection is
             maxSupply,
             this.totalSupply(),
             balance,
-            preSalePrice,
-            preSaleMaxMintPerWallet,
-            preSaleAllowlistClaimed[msg.sender],
-            preSaleStatus,
+            //preSalePrice,
+            //preSaleMaxMintPerWallet,
+            //preSaleAllowlistClaimed[msg.sender],
+            //preSaleStatus,
             publicSalePrice,
             publicSaleMaxMintPerTx,
             publicSaleStatus
