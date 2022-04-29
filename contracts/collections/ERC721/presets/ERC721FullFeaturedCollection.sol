@@ -36,8 +36,8 @@ contract ERC721FullFeaturedCollection is
         string memory contractURI,
         string memory placeholderURI,
         uint256 maxSupply,
-        uint256 preSalePrice,
-        uint256 preSaleMaxMintPerWallet,
+        \\uint256 preSalePrice,
+        \\uint256 preSaleMaxMintPerWallet,
         uint256 publicSalePrice,
         uint256 publicSaleMaxMintPerTx
     )
